@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Shop Management</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Apex Store Management </h1>
+
+    <!-- Products Section -->
+    <section id="products">
+        <h2>Products</h2>
+        <input type="text" id="productSearch" placeholder="Search products..." onkeyup="searchProduct()">
+        <button id="addProductBtn">Add Product</button>
+        <div id="addProductForm" style="display:none;">
+            <input type="text" id="addProductName" placeholder="Product Name">
+            <input type="number" id="addProductCategoryId" placeholder="Category ID">
+            <input type="number" id="addProductPrice" placeholder="Price ($)">
+            <input type="number" id="addProductStock" placeholder="Stock">
+            <button id="submitProductBtn">Submit</button>
+            <button id="cancelProductBtn">Cancel</button>
+        </div>
+        <table id="productTable">
+            <thead>
+                <tr>
+                    <th>Product ID</th>
+                    <th>Name</th>
+                    <th>Category</th>
+                    <th>Price</th>
+                    <th>Stock</th>
+                    <th>Update</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </section>
+
+    <!-- Customers Section -->
+    <section id="customers">
+        <h2>Customers</h2>
+        <input type="text" id="customerSearch" placeholder="Search customers..." onkeyup="searchCustomer()">
+        <button id="addCustomerBtn">Add Customer</button>
+        <div id="addCustomerForm" style="display:none;">
+            <input type="text" id="addCustomerName" placeholder="Customer Name">
+            <input type="text" id="addCustomerPhone" placeholder="Phone">
+            <input type="email" id="addCustomerEmail" placeholder="Email">
+            <button id="submitCustomerBtn">Submit</button>
+            <button id="cancelCustomerBtn">Cancel</button>
+        </div>
+        <table id="customerTable">
+            <thead>
+                <tr>
+                    <th>Customer ID</th>
+                    <th>Name</th>
+                    <th>Phone</th>
+                    <th>Email</th>
+                    <th>Update</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </section>
+
+    <!-- Orders Section -->
+    <section id="orders">
+        <h2>Orders</h2>
+        <input type="text" id="orderSearch" placeholder="Search orders..." onkeyup="searchOrder()">
+        <button id="addOrderBtn">Add Order</button>
+        <div id="addOrderForm" style="display:none;">
+            <input type="number" id="addOrderCustomerId" placeholder="Customer ID">
+            <input type="number" id="addOrderProductId" placeholder="Product ID">
+            <input type="number" id="addOrderQuantity" placeholder="Quantity">
+            <input type="number" id="addOrderTotalPrice" placeholder="Total Price">
+            <select id="addOrderStatus">
+                <option value="Pending">Pending</option>
+                <option value="Completed">Completed</option>
+            </select>
+            <button id="submitOrderBtn">Submit</button>
+            <button id="cancelOrderBtn">Cancel</button>
+        </div>
+        <table id="orderTable">
+            <thead>
+                <tr>
+                    <th>Order ID</th>
+                    <th>Customer ID</th>
+                    <th>Product ID</th>
+                    <th>Quantity</th>
+                    <th>Total Price</th>
+                    <th>Status</th>
+                    <th>Update</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </section>
+
+    <!-- Overall Inventory Section -->
+    <section id="inventory">
+        <h2>Overall Inventory Summary</h2>
+        <table id="inventoryTable">
+            <thead>
+                <tr>
+                    <th>Category</th>
+                    <th>Total Products</th>
+                    <th>Total Stock</th>
+                    <th>Total Value (Ksh)</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>

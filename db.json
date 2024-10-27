@@ -1,0 +1,31 @@
+{
+  "store": {
+    "storeId": 1,
+    "name": "Local Store",
+    "address": "123 Nairobi, YourCity, YourCountry",
+    "phone": "020 000 000",
+    "email": "info@localstore.com"
+  },
+  "categories": [
+    { "categoryId": 1, "name": "Beverages" },
+    { "categoryId": 2, "name": "Snacks" },
+    { "categoryId": 3, "name": "Household" }
+  ],
+  "products": [
+    { "productId": 1, "name": "Coca-Cola", "categoryId": 1, "price": 1.5, "stock": 100 },
+    { "productId": 2, "name": "Potato Chips", "categoryId": 2, "price": 2, "stock": 50 },
+    { "productId": 3, "name": "Dish Soap", "categoryId": 3, "price": 3, "stock": 30 }
+  ],
+  "customers": [
+    { "customerId": 1, "name": "John Doe", "phone": "0123456789", "email": "johndoe@example.com" },
+    { "customerId": 2, "name": "Jane Smith", "phone": "0987654321", "email": "janesmith@example.com" }
+  ],
+  "orders": [
+    { "orderId": 1, "customerId": 1, "productId": 1, "quantity": 3, "totalPrice": 4.5, "status": "Completed" },
+    { "orderId": 2, "customerId": 2, "productId": 2, "quantity": 2, "totalPrice": 4, "status": "Pending" }
+  ],
+  "suppliers": [
+    { "supplierId": 1, "name": "Beverage Supplies Co.", "contact": "bevco@example.com" },
+    { "supplierId": 2, "name": "Snack Distributors Inc.", "contact": "snackdistributors@example.com" }
+  ]
+}

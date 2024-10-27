@@ -1,0 +1,99 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('https://img.freepik.com/premium-psd/packaging-cardboard-boxes-paper-with-shopping-carts-delivery-cargo-logistic-transportation-warehouse-storage-concept-3d-rendering_42098-465.jpg'); /* Update with your image URL */
+    background-size: cover;         /* Scales the image to cover the viewport */
+    background-repeat: no-repeat;   /* Prevents the image from tiling */
+    background-position: left;    /* Centers the image */
+    background-attachment: fixed;   /* Keeps the image fixed while scrolling */
+    color: #333;
+}
+
+/* Header Styles */
+h1 {
+    text-align: center;
+    background-color: #0077cc; /* Darker Sky Blue */
+    color: #fff;
+    padding: 20px 0;
+    margin: 0;
+}
+
+/* Section Styles */
+section {
+    width: 90%;
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+h2 {
+    color: #005f99; /* Even Darker Sky Blue */
+    margin-top: 0;
+}
+
+/* Table Styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+th {
+    background-color: #0077cc; /* Darker Sky Blue */
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #e0f0ff; /* Very Light Sky Blue */
+}
+
+tr:hover {
+    background-color: #b3d9ff; /* Light Hover Sky Blue */
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    table, th, td {
+        display: block;
+        width: 100%;
+    }
+
+    th {
+        text-align: right;
+        background-color: #0077cc; /* Darker Sky Blue */
+        padding: 10px;
+        color: white;
+    }
+
+    tr {
+        margin-bottom: 10px;
+    }
+
+    td {
+        padding: 8px;
+        text-align: left;
+        position: relative;
+    }
+
+    td:before {
+        content: attr(data-label);
+        position: absolute;
+        left: 0;
+        width: 100%;
+        padding: 8px;
+        font-weight: bold;
+        background-color: #f0f8ff; /* Very Light Sky Blue */
+        border-bottom: 1px solid #ddd;
+    }
+}
