@@ -7,7 +7,10 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <div class="container">
     <h1>Apex Store Management </h1>
+   <div class="motto"> Ready to serve you!</div>
+    </div>
 
     <!-- Products Section -->
     <section id="products">
@@ -15,9 +18,16 @@
         <input type="text" id="productSearch" placeholder="Search products..." onkeyup="searchProduct()">
         <button id="addProductBtn">Add Product</button>
         <div id="addProductForm" style="display:none;">
+            <input type="text" id="addProductId" placeholder="Product ID">
             <input type="text" id="addProductName" placeholder="Product Name">
-            <input type="number" id="addProductCategoryId" placeholder="Category ID">
-            <input type="number" id="addProductPrice" placeholder="Price ($)">
+            <select id="addProductCategoryId" required>
+                <option value="disabled selected">Select Category</option>
+                <option value="Beverages">Beverages</option>
+                <option value="Food stuff">Food stuff</option>
+                <option value="Electonics">Electonics</option>
+                <option value="Household Items">Household Items</option>
+            </select>
+            <input type="number" id="addProductPrice" placeholder="Price (Ksh)">
             <input type="number" id="addProductStock" placeholder="Stock">
             <button id="submitProductBtn">Submit</button>
             <button id="cancelProductBtn">Cancel</button>
@@ -28,7 +38,7 @@
                     <th>Product ID</th>
                     <th>Name</th>
                     <th>Category</th>
-                    <th>Price</th>
+                    <th>Price(Ksh.)</th>
                     <th>Stock</th>
                     <th>Update</th>
                 </tr>
@@ -62,18 +72,19 @@
             <tbody></tbody>
         </table>
     </section>
-
     <!-- Orders Section -->
     <section id="orders">
         <h2>Orders</h2>
         <input type="text" id="orderSearch" placeholder="Search orders..." onkeyup="searchOrder()">
         <button id="addOrderBtn">Add Order</button>
         <div id="addOrderForm" style="display:none;">
-            <input type="number" id="addOrderCustomerId" placeholder="Customer ID">
-            <input type="number" id="addOrderProductId" placeholder="Product ID">
+            <input type="number" id="addOrderId" placeholder="Order ID">
+            <input type="text" id="addOrderCustomerName" placeholder="Customer Name">
+            <input type="text" id="addOrderProdut" placeholder="Product">
             <input type="number" id="addOrderQuantity" placeholder="Quantity">
             <input type="number" id="addOrderTotalPrice" placeholder="Total Price">
-            <select id="addOrderStatus">
+            <select id="addOrderStatus" required>
+                <option value="disable selected">Select Category</option>
                 <option value="Pending">Pending</option>
                 <option value="Completed">Completed</option>
             </select>
@@ -95,15 +106,13 @@
             <tbody></tbody>
         </table>
     </section>
-
     <!-- Overall Inventory Section -->
     <section id="inventory">
-        <h2>Overall Inventory Summary</h2>
+        <h2> Inventory Summary</h2>
         <table id="inventoryTable">
             <thead>
                 <tr>
                     <th>Category</th>
-                    <th>Total Products</th>
                     <th>Total Stock</th>
                     <th>Total Value (Ksh)</th>
                 </tr>
@@ -111,7 +120,6 @@
             <tbody></tbody>
         </table>
     </section>
-
     <script src="script.js"></script>
 </body>
 </html>

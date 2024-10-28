@@ -3,12 +3,29 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-image: url('https://img.freepik.com/premium-psd/packaging-cardboard-boxes-paper-with-shopping-carts-delivery-cargo-logistic-transportation-warehouse-storage-concept-3d-rendering_42098-465.jpg'); /* Update with your image URL */
-    background-size: cover;         /* Scales the image to cover the viewport */
-    background-repeat: no-repeat;   /* Prevents the image from tiling */
-    background-position: left;    /* Centers the image */
-    background-attachment: fixed;   /* Keeps the image fixed while scrolling */
-    color: #333;
+    min-height: 100vh; /* Ensures the body takes at least the full viewport height */
+    background-color: #f4f7fa; /* Light background color for a clean look */
+    color: #333; /* Adjust text color if needed */
+    background-image: url('https://png.pngtree.com/thumb_back/fh260/background/20230718/pngtree-digital-retailing-illustration-laptop-keyboard-with-shopping-basket-and-e-commerce-image_3903657.jpg'); /* Add your background image URL */
+    background-size: cover; /* Make the background image fit */
+    background-repeat: no-repeat; /* Prevents the background from repeating */
+    background-position: center; /* Center the background image */
+}
+
+/* Container Styles */
+.container {
+    text-align: center; /* Center-aligns the content */
+    position: relative; /* Allows for absolute positioning if needed */
+    padding: 20px; /* Add padding for spacing */
+}
+
+/* Top Right Image */
+.top-right-image {
+    position: absolute; /* Absolute positioning */
+    top: 20px; /* Space from the top */
+    right: 20px; /* Space from the right */
+    max-width: 100px; /* Limit the maximum width */
+    border-radius: 5px; /* Optional: rounded corners */
 }
 
 /* Header Styles */
@@ -16,8 +33,31 @@ h1 {
     text-align: center;
     background-color: #0077cc; /* Darker Sky Blue */
     color: #fff;
-    padding: 20px 0;
+    padding: 24px 0;
     margin: 0;
+    border-radius: 8px; /* Rounded corners */
+}
+
+/* Motto Styles */
+.motto {
+    white-space: nowrap; /* Prevents the text from wrapping */
+    overflow: hidden; /* Hides any overflow */
+    width: 100%; /* Sets width to 100% of the parent element */
+    animation: scroll 30s linear infinite; /* Animation properties */
+    font-size: 14px; /* Adjust font size as needed */
+    color: #fff; /* Set the text color */
+    position: absolute; /* Allows the motto to move independently */
+    bottom: -3px; /* Position the motto slightly below the title */
+    left: 0; /* Aligns the motto to the left */
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(100%); /* Start from the right */
+    }
+    100% {
+        transform: translateX(-100%); /* Move to the left */
+    }
 }
 
 /* Section Styles */
@@ -25,15 +65,18 @@ section {
     width: 90%;
     max-width: 800px;
     margin: 20px auto;
-    background-color: #fff;
+    background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent white for better background visibility */
     padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
 }
 
+/* Heading Styles */
 h2 {
     color: #005f99; /* Even Darker Sky Blue */
     margin-top: 0;
+    border-bottom: 2px solid #0077cc; /* Underline */
+    padding-bottom: 10px; /* Spacing below */
 }
 
 /* Table Styles */
@@ -44,7 +87,7 @@ table {
 }
 
 th, td {
-    padding: 10px;
+    padding: 12px; /* Increased padding */
     border: 1px solid #ddd;
     text-align: left;
 }
@@ -52,6 +95,7 @@ th, td {
 th {
     background-color: #0077cc; /* Darker Sky Blue */
     color: white;
+    font-weight: bold; /* Bold text */
 }
 
 tr:nth-child(even) {
@@ -60,6 +104,35 @@ tr:nth-child(even) {
 
 tr:hover {
     background-color: #b3d9ff; /* Light Hover Sky Blue */
+}
+
+/* Button Styles */
+button {
+    background-color: #0077cc; /* Button background color */
+    color: white;
+    border: none;
+    border-radius: 5px; /* Rounded corners */
+    padding: 10px 15px; /* Padding for button */
+    cursor: pointer; /* Pointer cursor */
+    transition: background-color 0.3s; /* Smooth transition */
+}
+
+button:hover {
+    background-color: #005f99; /* Darker on hover */
+}
+
+/* Form Styles */
+input, select, textarea {
+    width: calc(100% - 20px); /* Full width */
+    padding: 10px; /* Padding for inputs */
+    margin-top: 5px; /* Margin above inputs */
+    margin-bottom: 15px; /* Margin below inputs */
+    border: 1px solid #ddd;
+    border-radius: 5px; /* Rounded corners */
+}
+
+input:focus, select:focus, textarea:focus {
+    border-color: #0077cc; /* Border color on focus */
 }
 
 /* Responsive Design */
@@ -71,9 +144,7 @@ tr:hover {
 
     th {
         text-align: right;
-        background-color: #0077cc; /* Darker Sky Blue */
         padding: 10px;
-        color: white;
     }
 
     tr {
